@@ -1,6 +1,8 @@
 package bank.management.system;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.*;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,7 +13,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class Signup2 extends JFrame {
+public class Signup2 extends JFrame implements ActionListener{
 
     String formno;
     JComboBox comboBox,comboBox2,comboBox3,comboBox4,comboBox5;
@@ -176,6 +178,7 @@ public class Signup2 extends JFrame {
         next.setBackground(Color.WHITE);
         next.setForeground(Color.BLACK);
         next.setBounds(570,640,100,30);
+        next.addActionListener(this);
         add(next);
 
 
@@ -214,6 +217,10 @@ public class Signup2 extends JFrame {
         new Signup2("");
 
 
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
     }
     
 }
