@@ -1,6 +1,5 @@
 package bank.management.system;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
@@ -9,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -220,6 +220,54 @@ public class Signup2 extends JFrame implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        String rel = (String)comboBox.getSelectedItem();
+        String cat = (String)comboBox2.getSelectedItem();
+        String inc = (String)comboBox3.getSelectedItem();
+        String edu = (String)comboBox4.getSelectedItem();
+        String occ = (String)comboBox5.getSelectedItem();
+
+        String pan = panField.getText();
+        String aadhar = aadharField.getText();
+
+        String citizen = " ";
+        if(r1.isSelected())
+        {
+            citizen ="Yes";
+        }
+        else if(r2.isSelected())
+        { 
+            citizen = "No";
+        }
+        String eAccount = " ";
+        if((r1.isSelected()))
+        {
+            eAccount = "Yes";
+        }
+        else if(r2.isSelected()){
+            eAccount = "No";
+        }
+
+        try {
+
+        if(panField.getText().equals(" ") ||aadharField.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Fill all the Fields");
+            }
+            else{
+                Conn c1 = new Conn();
+                String q = "insert into signup_two values('"+formno+"','"+rel+"','"+cat+"','"+inc+"','"+edu+"','"+occ+"','"+pan+"','"+aadhar+"','"+citizen+"','"+eAccount+"')";
+                c1.statement.executeUpdate(q);
+                new Signup3(formno);
+                setVisible(false);
+            }
+            
+            
+        } catch (Exception E) {
+            E.printStackTrace();
+        }
+
+
         
     }
     
