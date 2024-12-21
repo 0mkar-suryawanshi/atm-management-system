@@ -3,15 +3,8 @@ package bank.management.system;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JRadioButton;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import javax.swing.*;
+
 
 public class Signup2 extends JFrame implements ActionListener{
 
@@ -23,9 +16,10 @@ public class Signup2 extends JFrame implements ActionListener{
     JButton next;
     
 
-    Signup2( String first)
+    Signup2( String formno)
     {
         super("APPLICATION FORM");
+        this.formno = formno;
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
 		Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
@@ -34,7 +28,6 @@ public class Signup2 extends JFrame implements ActionListener{
 		image.setBounds(150,5,100,100);
 		add(image);
 
-        this.formno = formno;
 
         JLabel l1 = new JLabel("Page 2");
         l1.setFont(new Font("RaleWay",Font.BOLD,22));
@@ -165,12 +158,12 @@ public class Signup2 extends JFrame implements ActionListener{
 
         JLabel  l12= new JLabel("Form No: ");
         l12.setFont(new Font("RaleWay",Font.BOLD,18));
-        l12.setBounds(700,10,150,30);
+        l12.setBounds(650,10,150,30);
         add(l12);
 
         JLabel  l13= new JLabel(formno);
-        l13.setFont(new Font("RaleWay",Font.BOLD,18));
-        l13.setBounds(700,100,150,30);
+        l13.setFont(new Font("RaleWay",Font.BOLD,14));
+        l13.setBounds(750,10,150,30);
         add(l13);
 
         next = new JButton("Next");

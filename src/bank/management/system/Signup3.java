@@ -1,7 +1,5 @@
 package bank.management.system;
 
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -162,6 +160,11 @@ public class Signup3 extends JFrame implements ActionListener {
         l12.setBounds(600,10,150,30);;
         add(l12);
 
+        JLabel  fn = new JLabel(formno);
+        fn.setFont(new Font("RaleWay",Font.BOLD,14));
+        fn.setBounds(750,10,150,30);
+        add(fn);
+
         JLabel l13 = new JLabel();
         l13.setFont(new Font("Raleway",Font.BOLD,14));
         l13.setBounds(700,10,60,30);;
@@ -268,6 +271,7 @@ public class Signup3 extends JFrame implements ActionListener {
                     c1.statement.executeUpdate(query1);
                     c1.statement.executeUpdate(query2);
                     JOptionPane.showMessageDialog(null,"Card No : "+cardno+"\n Pin : "+pin);
+                    new Deposit(pin);
                     setVisible(false);
 
                 }
