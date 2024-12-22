@@ -4,11 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.JComboBox;
 
 
 public class Signup2 extends JFrame implements ActionListener{
 
     String formno;
+    @SuppressWarnings("rawtypes")
     JComboBox comboBox,comboBox2,comboBox3,comboBox4,comboBox5;
     JTextField panField,aadharField;
     JRadioButton e1,e2;

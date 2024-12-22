@@ -5,13 +5,16 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
 
 public class Login extends JFrame implements ActionListener {
 	JLabel label1,label2,label3;
@@ -103,6 +106,7 @@ public class Login extends JFrame implements ActionListener {
 		JLabel iiimage = new JLabel(iii3);
 		iiimage.setBounds(0,0,850,480);
 		add(iiimage);
+		setUndecorated(true);
 		setVisible(true);
 		setSize(850,480);
 		setLocation(450, 200);
@@ -120,6 +124,19 @@ public class Login extends JFrame implements ActionListener {
 		try {
 			if(e.getSource() == button1)
 			{
+				Conn c = new Conn();
+				String cardno = textField1.getText();
+				@SuppressWarnings("deprecation")
+				String pin = passwordField.getText();
+				String q = "select * from login where card_number ='"+cardno+"' and pin = '"+pin+"'";
+				ResultSet resultSet = c.statement.executeQuery(q);
+				if(resultSet.next()){
+					setVisible(false);
+					new Main_Class(pin);
+				}else{
+					JOptionPane.showMessageDialog(null, "Incorrect Card or PIN");
+				}
+
 
 			}else if(e.getSource() == button2)
 			{
