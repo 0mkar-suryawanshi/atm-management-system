@@ -106,7 +106,7 @@ public class Login extends JFrame implements ActionListener {
 		JLabel iiimage = new JLabel(iii3);
 		iiimage.setBounds(0,0,850,480);
 		add(iiimage);
-		setUndecorated(true);
+		//setUndecorated(true);
 		setVisible(true);
 		setSize(850,480);
 		setLocation(450, 200);
