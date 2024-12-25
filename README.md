@@ -49,7 +49,7 @@ The Bank Management System is a Java Swing-based application designed to manage 
 
 4. **Run the Application**:
 
-   - Compile and run the Login.java` file to start the application.
+   - Compile and run the 'Login.java` file to start the application.
 
 ## Usage
 
@@ -71,8 +71,8 @@ Bank-Management-System/
 │   │   │   ├── controllers/ # Business logic and event handling
 │   │   ├── Main.java        # Entry point of the application
 ├── db/
-│   ├── bank.db              # SQLite database file
-│   ├── schema.sql           # SQL script for database schema
+│   ├── bank.db              # MySQL database file
+│   ├── schema.sql           # MySQL script for database schema
 ├── README.md
 ```
 
