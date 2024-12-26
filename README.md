@@ -7,7 +7,7 @@ The Bank Management System is a Java Swing-based application designed to manage 
 ## Features
 
 - **Account Management**:
-  - Create new accounts
+  - Create new accounts 
   - View account details
   - Delete accounts
 - **Transaction Management**:
