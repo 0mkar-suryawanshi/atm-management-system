@@ -59,22 +59,7 @@ The Bank Management System is a Java Swing-based application designed to manage 
    - **Transaction Management** for deposits, withdrawals, and viewing transaction history.
 3. Follow the on-screen prompts and input validation to perform operations.
 
-## Folder Structure
 
-```
-Bank-Management-System/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── models/      # Data models for accounts and transactions
-│   │   │   ├── views/       # GUI components
-│   │   │   ├── controllers/ # Business logic and event handling
-│   │   ├── Main.java        # Entry point of the application
-├── db/
-│   ├── bank.db              # MySQL database file
-│   ├── schema.sql           # MySQL script for database schema
-├── README.md
-```
 
 ## Future Enhancements
 
